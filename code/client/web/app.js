@@ -24,7 +24,7 @@ class Model {
   }
 
   classinate(report) {
-    return this.adapter.classinate(report)
+    return this.adapter.classinate({ sighting: report })
       .then(response => {
         return {
           classination: response.classination,
@@ -75,11 +75,11 @@ class ViewController {
 }
 
 class Adapter {
-  classinate(sighting) {
+  classinate(json) {
     return fetch(CLASSINATE_URL, {
       method: 'POST',
       headers: { "Content-Type": "application/json; charset=utf-8" },
-      body: JSON.stringify({ sighting })
+      body: JSON.stringify(json)
     }).then(response => response.json())
   }
 }

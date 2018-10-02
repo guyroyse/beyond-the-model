@@ -50,7 +50,7 @@ aside img {
   border-width: 1px;
   float: right;
 }
-aside .result {
+aside .message {
   float: right;
   text-align: right;
   width: 336px;
@@ -105,7 +105,7 @@ footer #powered-by a:hover {
 
 @media (min-width: 1001px) {
 
-  section .result {
+  section .message {
     display: none;
   }
 
@@ -140,7 +140,7 @@ footer #powered-by a:hover {
     margin-top: 25px;
   }
 
-  section .result {
+  section .message {
   }
 
 }
