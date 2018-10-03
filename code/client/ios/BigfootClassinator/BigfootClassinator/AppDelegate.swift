@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  BigfootClassinator
-//
-//  Created by Guy Royse on 10/2/18.
-//  Copyright © 2018 Nexosis. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
