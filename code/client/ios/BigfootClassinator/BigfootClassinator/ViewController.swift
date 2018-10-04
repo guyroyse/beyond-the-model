@@ -4,7 +4,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var sightingTextView: UITextView!
 
-    private var classinator = BigfootClassinator.shared
+    private var classinator = Classinator.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
