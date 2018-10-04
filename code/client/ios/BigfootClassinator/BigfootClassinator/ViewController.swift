@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         let sighting: String = self.sightingTextView?.text ?? ""
         self.classinator.classinate(sighting: sighting)
             .done { classination in
-                let title: String = classination.classination.rawValue
+                let title: String = classination.type.rawValue
                 let message: String = classination.message
                 self.showAlert(title: title, message: message)
             }
