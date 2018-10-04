@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sightingTextView: UITextView!
 
     private var classinator = Classinator.shared
+    private var messages = Messages.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,10 +13,10 @@ class ViewController: UIViewController {
 
     @IBAction func classinateButtonTapped(_ sender: Any) {
         let sighting: String = self.sightingTextView?.text ?? ""
-        self.classinator.classinate(sighting: sighting)
+        _ = classinator.classinate(sighting: sighting)
             .done { classination in
-                let title: String = classination.type.rawValue
-                let message: String = classination.message
+                let title = classination.rawValue
+                let message = self.messages.fetchMessage(classination: classination)
                 self.showAlert(title: title, message: message)
             }
     }

@@ -1,5 +1,12 @@
 import PromiseKit
 
+enum Classination: String {
+    case classA = "Class A"
+    case classB = "Class B"
+    case classC = "Class C"
+    case badClass = "Bad Class"
+}
+
 class Classinator {
 
     static let shared = Classinator()
@@ -8,30 +15,28 @@ class Classinator {
 
     func classinate(sighting: String) -> Promise<Classination> {
         return adapter.classinate(json: [ "sighting" : sighting ])
-            .then { Promise<Classination>.value(Classination(data: $0)) }
+            .then { data -> Promise<Classination> in
+                let selected = self.extractSelected(data: data)
+                let classination = self.createClassination(selected: selected)
+                return Promise<Classination>.value(classination)
+            }
+    }
+
+    private func extractSelected(data: [String : Any]) -> String {
+        let rawClassination = data["classination"] as? [String : Any]
+        return rawClassination?["selected"] as? String ?? ""
+    }
+
+    private func createClassination(selected: String) -> Classination {
+        return Classination.init(rawValue: selected) ?? .badClass
     }
 }
 
-struct Classination {
-    init(data: [String : Any]) {
-        let rawClassination = data["classination"] as? [String:Any] ?? [:]
-        let rawSelected = rawClassination["selected"] as? String ?? ""
-        self.type = ClassinationType.init(rawValue: rawSelected) ?? .classA
-        self.message = classinationMessages[self.type] ?? ""
+class Messages {
+
+    static let shared = Messages()
+
+    func fetchMessage(classination: Classination) -> String {
+        return Bundle.main.localizedString(forKey: classination.rawValue, value: nil, table: "Messages")
     }
-
-    var type: ClassinationType
-    var message: String
 }
-
-enum ClassinationType: String {
-    case classA = "Class A"
-    case classB = "Class B"
-    case classC = "Class C"
-}
-
-let classinationMessages = [
-    ClassinationType.classA : "You saw bigfoot! That's a Class A sighting.",
-    ClassinationType.classB : "You found some evidence of bigfoot like a footprint! That's a Class B sighting.",
-    ClassinationType.classC : "Someone told you about seeing bigfoot! That's a Class C sighting"
-]
