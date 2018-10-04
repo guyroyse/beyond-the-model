@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B9A9CD04D6A9A3A7FE1E7837 /* Pods_BigfootClassinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9B7911C2AA8C627912C448 /* Pods_BigfootClassinator.framework */; };
 		E436CE5C216537F900A91B4C /* BigfootClassinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436CE5B216537F900A91B4C /* BigfootClassinator.swift */; };
+		E4E2A70B216664F000AF0874 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2A70A216664F000AF0874 /* Adapter.swift */; };
 		E4EAE5ED2164088A002EEAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EAE5EC2164088A002EEAF2 /* AppDelegate.swift */; };
 		E4EAE5EF2164088A002EEAF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EAE5EE2164088A002EEAF2 /* ViewController.swift */; };
 		E4EAE5F22164088A002EEAF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EAE5F02164088A002EEAF2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		36EA4B7F34007466561E9ADC /* Pods-BigfootClassinator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigfootClassinator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigfootClassinator/Pods-BigfootClassinator.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9B7911C2AA8C627912C448 /* Pods_BigfootClassinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigfootClassinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E436CE5B216537F900A91B4C /* BigfootClassinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigfootClassinator.swift; sourceTree = "<group>"; };
+		E4E2A70A216664F000AF0874 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		E4EAE5E92164088A002EEAF2 /* BigfootClassinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigfootClassinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EAE5EC2164088A002EEAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EAE5EE2164088A002EEAF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				E4EAE5F52164088C002EEAF2 /* LaunchScreen.storyboard */,
 				E4EAE5F82164088C002EEAF2 /* Info.plist */,
 				E436CE5B216537F900A91B4C /* BigfootClassinator.swift */,
+				E4E2A70A216664F000AF0874 /* Adapter.swift */,
 			);
 			path = BigfootClassinator;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E2A70B216664F000AF0874 /* Adapter.swift in Sources */,
 				E436CE5C216537F900A91B4C /* BigfootClassinator.swift in Sources */,
 				E4EAE5EF2164088A002EEAF2 /* ViewController.swift in Sources */,
 				E4EAE5ED2164088A002EEAF2 /* AppDelegate.swift in Sources */,
