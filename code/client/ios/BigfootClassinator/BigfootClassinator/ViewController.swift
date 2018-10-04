@@ -19,6 +19,9 @@ class ViewController: UIViewController {
                 let message = self.messages.fetchMessage(classination: classination)
                 self.showAlert(title: title, message: message)
             }
+            .catch { error in
+                self.showAlert(title: "Error", message: error.localizedDescription)
+            }
     }
 
     private func showAlert(title: String, message: String) {
