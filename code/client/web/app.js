@@ -1,5 +1,3 @@
-const CLASSINATE_URL = 'http://localhost:5000/classinate';
-
 const WAIT_MESSAGE = "Analyzing your sighting...";
 const ERROR_MESSAGE = "There was an error processing your classination.";
 const CLASS_MESSAGES = {
