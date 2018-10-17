@@ -16,22 +16,6 @@ class App {
   }
 }
 
-class Model {
-  constructor() {
-    this.adapter = new Adapter()
-  }
-
-  classinate(report) {
-    return this.adapter.classinate({ sighting: report })
-      .then(response => {
-        return {
-          classination: response.classination,
-          message: CLASS_MESSAGES[response.classination.selected]
-        }
-      })
-  }
-}
-
 class View {
   constructor() {
     this._reportTextBox = document.getElementById('report')
@@ -70,6 +54,22 @@ class ViewController {
       })
   }
 
+}
+
+class Model {
+  constructor() {
+    this.adapter = new Adapter()
+  }
+
+  classinate(report) {
+    return this.adapter.classinate({ sighting: report })
+      .then(response => {
+        return {
+          classination: response.classination,
+          message: CLASS_MESSAGES[response.classination.selected]
+        }
+      })
+  }
 }
 
 class Adapter {
