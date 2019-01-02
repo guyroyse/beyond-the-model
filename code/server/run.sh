@@ -1,8 +1,0 @@
-export FLASK_APP=app
-export FLASK_ENV=development
-export FLASK_RUN_PORT=5000
-
-export BIGFOOT_CLASSINATOR_PROJECT_ID=5b368c615ccccb1b75354a4f
-export BIGFOOT_CLASSINATOR_MODEL_ID=5b3691e00c609e8e71e68686
-
-flask run --host=0.0.0.0
